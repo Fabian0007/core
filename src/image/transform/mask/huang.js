@@ -52,7 +52,7 @@ export default function huang(histogram) {
         mu_1[ih - 1] = sum_pix /  num_pix;
     }
 
-    /* Determine the threshold that minimizes the fuzzy entropy */
+    /* Determine the threshold that minimizes the fuzzy entropy*/
     threshold = -1;
     min_ent = Number.MAX_VALUE;
     for (let it = 0; it < 256; it++){
