@@ -2,7 +2,7 @@ import Image from '../../image';
 
 import percentile from './percentile';
 import otsu from './otsu';
-
+import huang from './huang';
 
 /*
  Creation of binary mask is based on the determination of a threshold
@@ -34,6 +34,9 @@ export default function mask({
                 break;
             case 'otsu':
                 threshold = otsu(histogram);
+                break;
+            case 'huang':
+                threshold = huang(histogram);
                 break;
             default:
                 throw new Error('mask transform unknown algorithm: ' + algorithm);
